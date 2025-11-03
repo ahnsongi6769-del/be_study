@@ -13,39 +13,66 @@ public class Quiz07 {
 		// 3) 1~6시 이른 오전입니다. 7~12 늦은 오전입니다.
 		// 4) 13~18시 이른 오후입니다. 19~24 늦은 오후입니다.
 		
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.print("숫자를 입력하세요 : ");
-//		int number = scanner.nextInt();
-//		
-//		if(number>=1 && number <=24) {
-//			
-//			if(number<=12) {//오전
-//				System.out.print("오전입니다.");
-//			if(number < 7) { //이른오전
-//				//System.out.print("오전입니다.");
-//				System.out.print(" 이른 오전입니다.");
-//			}else { //늦은오전
-//				//System.out.print("오전입니다.");
-//				System.out.print("늦은 오전입니다.");
-//			}
-//			}else {//오후 
-//				System.out.print("오후입니다.");
-//				if(number < 19) {
-//					//System.out.print("오후입니다.");
-//					System.out.print(" 이른 오후입니다.");
-//				}else { 
-//					//System.out.print("오후입니다.");
-//					System.out.print("늦은 오후입니다.");
-//				}
-//			}
-//		}else {
-//			}System.out.print("잘못입력했습니다.");
-//		}
-//		
+//				/*
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("정수 입력하세요(1~24): ");
+		int time = scanner.nextInt();
+
+		if( time >= 1 && time <= 24) {  //정상범위 입력
+			//1~24 보장
+			//정상
+			if( time <= 12) {  //오전
+				//오전 확정
+
+				System.out.println("오전입니다.");
+
+				if(time < 7) { //이른 오전
+					//System.out.println("오전입니다.");
+					System.out.println("이른 오전입니다.");
+				} else { //늦은 오전
+					//System.out.println("오전입니다.");
+					System.out.println("늦은 오전입니다.");
+				}
+
+			} else { //오후
+
+				//오후 확정
+				System.out.println("오후입니다.");
+
+				if(time < 19) { //이른 오후
+					//System.out.println("오후입니다.");
+					System.out.println("이른 오후입니다.");
+				} else { //늦은 오후
+					//System.out.println("오후입니다.");
+					System.out.println("늦은 오후입니다.");
+				}
+			}
+
+		} else {  //비정상  잘못된 범위
+			System.out.println("잘못입력했습니다.");
+		}
+
+
+		if(time >= 1 && time <= 6) {
+			System.out.println("오전입니다.");
+			System.out.println("이른 오전입니다.");
+		} else if( time>6 && time <= 12) {
+			System.out.println("오전입니다.");
+			System.out.println("늦은 오전입니다.");
+		} else if( time>12 && time <= 18) {
+			System.out.println("오후입니다.");
+			System.out.println("이른 오후입니다.");
+		} else if( time>18 && time <= 24) {
+			System.out.println("오후입니다.");
+			System.out.println("늦은 오후입니다.");
+		} else {
+			System.out.println("잘못입력했습니다.");
+		}
+	
 		
 		//2번 아래 코드를 if문으로 변경 ( if 문으로 똑같은 결과가 나오게 작성 )
 
-		int diceNum = 3; //주사위 수 1~6
+//		int diceNum = 3; //주사위 수 1~6
 //
 //		// if문 변환
 //		switch(diceNum) {
@@ -83,7 +110,7 @@ public class Quiz07 {
 
 		//3번 아래 코드를 swtich 문으로 변경
 
-		String localNum = "031";
+//		String localNum = "031";
 		// switch 문으로 변경
 //		if ( localNum.equals("031") ){
 //		System.out.println("경기도입니다");
@@ -120,82 +147,82 @@ public class Quiz07 {
 		// 단, 점수는 100점까지로 간주합니다.
 		// 점수는 0~100 점 중에 score로 주어진다.
 		
-		int score =85;
-		
-		if( score >= 90) { //90 ~100
-		System.out.println("학점 A");
-		} else if ( score >= 80) { //80~89
-		System.out.println("학점 B");
-		} else if (score >= 70) { // 70 ~79
-		System.out.println("학점 C");
-		} else if (score < 70) { //~~69
-		System.out.println("학점 F");
-		}
-		
-		int score10 = score/10;
-		switch(score10) {
-		case 10:
-		case 9:
-			System.out.println("학점 A");
-			break;
-		case 8:
-			System.out.println("학점 B");
-			break;
-		case 7:
-			System.out.println("학점 C");
-			break;
-		default:
-			System.out.println("학점 F");
-
-		
-		}
-		
-		
-		
-		switch(score) {
-		case 100:
-		case 99:
-		case 98:
-		case 97:
-		case 96:
-		case 95:
-		case 94:
-		case 93:
-		case 92:
-		case 91:
-		case 90:
-			System.out.println("학점 A");
-			break;
-		case 89:
-		case 88:
-		case 87:
-		case 86:
-		case 85:
-		case 84:
-		case 83:
-		case 82:
-		case 81:
-		case 80:
-			System.out.println("학점 B");
-			break;
-		case 79:
-		case 78:
-		case 77:
-		case 76:
-		case 75:
-		case 74:
-		case 73:
-		case 72:
-		case 71:
-		case 70:
-			System.out.println("학점 C");
-			break;
-		default:
-			System.out.println("학점 F");
-			break;
-		
+//		int score =85;
+//		
+//		if( score >= 90) { //90 ~100
+//		System.out.println("학점 A");
+//		} else if ( score >= 80) { //80~89
+//		System.out.println("학점 B");
+//		} else if (score >= 70) { // 70 ~79
+//		System.out.println("학점 C");
+//		} else if (score < 70) { //~~69
+//		System.out.println("학점 F");
+//		}
+//		
+//		int score10 = score/10;
+//		switch(score10) {
+//		case 10:
+//		case 9:
+//			System.out.println("학점 A");
+//			break;
+//		case 8:
+//			System.out.println("학점 B");
+//			break;
+//		case 7:
+//			System.out.println("학점 C");
+//			break;
+//		default:
+//			System.out.println("학점 F");
+//
+//		
+//		}
+//		
+//		
+//		
+//		switch(score) {
+//		case 100:
+//		case 99:
+//		case 98:
+//		case 97:
+//		case 96:
+//		case 95:
+//		case 94:
+//		case 93:
+//		case 92:
+//		case 91:
+//		case 90:
+//			System.out.println("학점 A");
+//			break;
+//		case 89:
+//		case 88:
+//		case 87:
+//		case 86:
+//		case 85:
+//		case 84:
+//		case 83:
+//		case 82:
+//		case 81:
+//		case 80:
+//			System.out.println("학점 B");
+//			break;
+//		case 79:
+//		case 78:
+//		case 77:
+//		case 76:
+//		case 75:
+//		case 74:
+//		case 73:
+//		case 72:
+//		case 71:
+//		case 70:
+//			System.out.println("학점 C");
+//			break;
+//		default:
+//			System.out.println("학점 F");
+//			break;
+//		
 		}	
 		
 		}
-	}
+	
 
