@@ -34,29 +34,29 @@ public class Quiz21 {
 			// 언제까지 ? 6개 다 뽑을때 까지 
 			// 그럼 지금 몇개 뽑은 상태인데 ? -> 관리 
 		
-//		int[] lotto = new int[6]; // 정수 6개를 담을 수 있는 통 준비 
-//		int count = 0; // 현재 배열에 채워진 번호의 개수
-//		while(count<6) {
-//			int newNumber = (int)(Math.random()*45)+1; 
-//		// Math random 은 double 타입의 난수를 반환 , 랜덤값에 45를 곱하면 결과 범위는 0.0 ~ 44.9사이가 됨, 정수타입으로 값을 내야하기 때문에 int 로 형변환 
-//		// int로 형 변환을 하게 되면 소수점 이하를 버리고 정수 부분만 취하기 때문에 최대 값은 44가 됨 -> 그래서 +1 을 해서 45를 포함하는 값을 추출할 수 있도록 설정 
-//			boolean isDuplicate = false; // 기존에 같은 숫자가 있는지 중복검사
-//					// 뜻 - 복사하다 
-//			for(int i =0; i<count; i++) {
-//				if(lotto[i] == newNumber) {
-//					isDuplicate = true;
-//					break;
-//				}
-//			}
-//			
-//			if(!isDuplicate) {
-//				lotto[count] = newNumber;
-//				count++;
-//			}else {
-//			}
-//		  System.out.print(newNumber+" ");
-//		}
-//		System.out.println();
+		int[] lotto = new int[6]; // 정수 6개를 담을 수 있는 통 준비 
+		int count = 0; // 현재 배열에 채워진 번호의 개수
+		while(count<6) {
+			int newNumber = (int)(Math.random()*45)+1; 
+		// Math random 은 double 타입의 난수를 반환 , 랜덤값에 45를 곱하면 결과 범위는 0.0 ~ 44.9사이가 됨, 정수타입으로 값을 내야하기 때문에 int 로 형변환 
+		// int로 형 변환을 하게 되면 소수점 이하를 버리고 정수 부분만 취하기 때문에 최대 값은 44가 됨 -> 그래서 +1 을 해서 45를 포함하는 값을 추출할 수 있도록 설정 
+			boolean isDuplicate = false; // 기존에 같은 숫자가 있는지 중복검사
+					// 뜻 - 복사하다 
+			for(int i =0; i<count; i++) {
+				if(lotto[i] == newNumber) {
+					isDuplicate = true;
+					break;
+				}
+			}
+			
+			if(!isDuplicate) {
+				lotto[count] = newNumber;
+				count++;
+			}else {
+			}
+		  System.out.print(newNumber+" ");
+		}
+		System.out.println();
 		// -------------- 선생님-----------------------------
 //		단순 랜넘만 수행	
 //		for(int i=0; i<lotto.length; i++) {
@@ -119,33 +119,33 @@ public class Quiz21 {
 //		전체 평균 : 20
 		// 반 + 점수를 배열로 저장
 	
-		int[][] scoreArr = new int[3][5];
-		// i :0  ㅁㅁㅁㅁㅁ 1반
-		// i : 1 ㅁㅁㅁㅁㅁ 2반
-		// i : 2 ㅁㅁㅁㅁㅁ 3반
-		
-		Scanner scanner = new Scanner(System.in);
-		
-		for(int i=0; i>scoreArr.length; i++) {
-			System.out.println(i+1+"반 : ");
-			for(int j=0; j<scoreArr[i].length; j++) {
-				scoreArr[i][j] = scanner.nextInt();
-			}
-		}
-		
-		
-		int total = 0;
-		int classTotal = 0;
-		for(int i=0; i>scoreArr.length; i++) {
-			
-			classTotal = 0;
-			for(int j=0; j<scoreArr[i].length; j++) {
-				classTotal += scoreArr[i][j];
-			}
-			total += classTotal;
-			System.out.println(i +1+"반 평균 : " + (classTotal/5.0));
-		}
-		System.out.println("전체 평균 : " +(total/15.0));
+//		int[][] scoreArr = new int[3][5];
+//		// i :0  ㅁㅁㅁㅁㅁ 1반
+//		// i : 1 ㅁㅁㅁㅁㅁ 2반
+//		// i : 2 ㅁㅁㅁㅁㅁ 3반
+//		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		for(int i=0; i>scoreArr.length; i++) {
+//			System.out.println(i+1+"반 : ");
+//			for(int j=0; j<scoreArr[i].length; j++) {
+//				scoreArr[i][j] = scanner.nextInt();
+//			}
+//		}
+//		
+//		
+//		int total = 0;
+//		int classTotal = 0;
+//		for(int i=0; i>scoreArr.length; i++) {
+//			
+//			classTotal = 0;
+//			for(int j=0; j<scoreArr[i].length; j++) {
+//				classTotal += scoreArr[i][j];
+//			}
+//			total += classTotal;
+//			System.out.println(i +1+"반 평균 : " + (classTotal/5.0));
+//		}
+//		System.out.println("전체 평균 : " +(total/15.0));
 		
 
 		
