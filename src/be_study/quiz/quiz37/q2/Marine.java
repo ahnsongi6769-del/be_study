@@ -1,0 +1,7 @@
+package be_study.quiz.quiz37.q2;
+
+public class Marine extends Unit {
+
+	void stimPack() { /* .*/} //스팀팩을 사용한다
+	
+}
